@@ -6,9 +6,9 @@ import (
 
 	"github.com/golang/glog"
 	"github.com/jinzhu/gorm"
-	"github.com/orvice/shadowsocks-go/mu/log"
-	"github.com/orvice/shadowsocks-go/mu/user"
-	ss "github.com/orvice/shadowsocks-go/shadowsocks"
+	"github.com/SpeedMe/shadowsocks-go/mu/log"
+	"github.com/SpeedMe/shadowsocks-go/mu/user"
+	ss "github.com/SpeedMe/shadowsocks-go/shadowsocks"
 )
 
 var client *Client

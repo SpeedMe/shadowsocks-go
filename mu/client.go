@@ -3,10 +3,10 @@ package main
 import (
 	"os"
 
-	muconfig "github.com/orvice/shadowsocks-go/mu/config"
-	"github.com/orvice/shadowsocks-go/mu/mysql"
-	"github.com/orvice/shadowsocks-go/mu/user"
-	webapi "github.com/orvice/shadowsocks-go/mu/webapi"
+	muconfig "github.com/SpeedMe/shadowsocks-go/mu/config"
+	"github.com/SpeedMe/shadowsocks-go/mu/mysql"
+	"github.com/SpeedMe/shadowsocks-go/mu/user"
+	webapi "github.com/SpeedMe/shadowsocks-go/mu/webapi"
 )
 
 func InitMySqlClient() error {
