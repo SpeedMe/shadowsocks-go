@@ -17,6 +17,7 @@ type User struct {
 	TransferEnable int64  `json:"transfer_enable"`
 	U              int64  `json:"u"`
 	D              int64  `json:"d"`
+	NodeIds        string `json:"node_ids"`
 }
 
 func (u User) GetPort() int {
@@ -38,7 +39,12 @@ func (u User) IsEnable() bool {
 	if u.TransferEnable < (u.U + u.D) {
 		return false
 	}
-	return true
+	for _, node := range strings.Split(u.NodeIds, "#") {
+        	if strings.EqualFold(client.nodeId, node) {
+			return true
+		}
+    	}
+	return false
 }
 
 func (u User) GetCipher() (*ss.Cipher, error, bool) {
