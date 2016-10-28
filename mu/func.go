@@ -250,7 +250,8 @@ func runWithCustomMethod(user user.User) {
 	ln, err := net.Listen("tcp", ":"+port)
 	if err != nil {
 		Log.Error(fmt.Sprintf("error listening port %v: %v\n", port, err))
-		os.Exit(1)
+		//os.Exit(1)
+		return
 	}
 	passwdManager.add(port, password, ln)
 	cipher, err, auth := user.GetCipher()
