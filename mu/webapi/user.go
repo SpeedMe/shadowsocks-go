@@ -1,12 +1,12 @@
 package web
 
 import (
-	"fmt"
+	//"fmt"
 	"strconv"
 	"strings"
 
 	"github.com/SpeedMe/shadowsocks-go/mu/user"
-	"github.com/SpeedMe/shadowsocks-go/mu/log"
+	//"github.com/SpeedMe/shadowsocks-go/mu/log"
 	ss "github.com/SpeedMe/shadowsocks-go/shadowsocks"
 )
 
