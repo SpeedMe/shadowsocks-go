@@ -42,10 +42,13 @@ func (u User) IsEnable() bool {
 		return false
 	}
 	for _, node := range strings.Split(u.NodeIds, "#") {
-		log.Log.Info(fmt.Sprintf("available server nodes %v ...\n", u.NodeIds))
-		log.Log.Info(fmt.Sprintf("available server node %v ...\n", node))
-		log.Log.Info(fmt.Sprintf("server node %v ...\n", client.nodeId))
+		//log.Log.Info(fmt.Sprintf("available server nodes %v ...\n", u.NodeIds))
+		//log.Log.Info(fmt.Sprintf("available server node %v ...\n", node))
+		//log.Log.Info(fmt.Sprintf("server node %v ...\n", client.nodeId))
         	if strings.EqualFold(strconv.Itoa(client.nodeId), node) {
+			log.Log.Info(fmt.Sprintf("available server nodes %v ...\n", u.NodeIds))
+			log.Log.Info(fmt.Sprintf("available server node %v ...\n", node))
+			log.Log.Info(fmt.Sprintf("server node %v ...\n", client.nodeId))
 			return true
 		}
     	}
