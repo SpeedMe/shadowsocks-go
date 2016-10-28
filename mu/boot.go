@@ -89,7 +89,9 @@ func boot() {
 
 // 第一次启动
 func bootUsers(users []user.User) {
+	Log.Info("hello")
 	for _, user := range users {
+		Log.Info("world")
 		var err error
 		Log.Info(user.GetUserInfo())
 
