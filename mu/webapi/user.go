@@ -40,7 +40,7 @@ func (u User) IsEnable() bool {
 		return false
 	}
 	for _, node := range strings.Split(u.NodeIds, "#") {
-        	if strings.EqualFold(client.nodeId, node) {
+        	if strings.EqualFold(strconv.Itoa(client.nodeId), node) {
 			return true
 		}
     	}
