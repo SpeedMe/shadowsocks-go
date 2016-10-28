@@ -39,8 +39,8 @@ func boot() {
 	Log.Info(len(users))
 	// clear storage
 	storage.ClearAll()
-	bootUsers(users)
-	time.Sleep(muconfig.Conf.Base.CheckTime * time.Second)
+	//bootUsers(users)
+	//time.Sleep(muconfig.Conf.Base.CheckTime * time.Second)
 
 	go func() {
 		for {
@@ -89,9 +89,7 @@ func boot() {
 
 // 第一次启动
 func bootUsers(users []user.User) {
-	Log.Info("hello")
 	for _, user := range users {
-		Log.Info("world")
 		var err error
 		Log.Info(user.GetUserInfo())
 
